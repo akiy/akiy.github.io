@@ -1,0 +1,47 @@
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+:root {
+	--bg-color: #001523; 
+	--main-color:  #41ead4;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-size: 16px;
+	box-sizing: inherit;
+}
+
+body {
+	color: #fff;
+	background-color: var(--bg-color);
+	font-size: 1rem;
+	font-family: sans-serif;
+	line-height: 1.6;
+	padding: 2rem 0;
+}
+
+@media screen and (min-width: 960px) {
+	body {
+		font-size: 1.2rem;
+	}
+}
+
+a {
+	color: var(--main-color);
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+.container {
+	width: 90%;
+	max-width: 960px;
+	margin: 0 auto;
+}
