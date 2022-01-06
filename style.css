@@ -1,9 +1,10 @@
 *, *::before, *::after {
-	box-sizing: border-box;
+	box-sizing: inherit;
 }
 :root {
-	--bg-color: #001523; 
-	--main-color:  #41ead4;
+	--bg-color: #f9f9f9; 
+	--main-color:  #000;
+	--blue: #007bff;
 }
 
 * {
@@ -13,26 +14,19 @@
 
 html {
 	font-size: 16px;
-	box-sizing: inherit;
+	box-sizing: border-box;
 }
 
 body {
-	color: #fff;
+	color: var(--main-color);
 	background-color: var(--bg-color);
 	font-size: 1rem;
 	font-family: sans-serif;
-	line-height: 1.6;
-	padding: 2rem 0;
-}
-
-@media screen and (min-width: 960px) {
-	body {
-		font-size: 1.2rem;
-	}
+	line-height: 1.5;
 }
 
 a {
-	color: var(--main-color);
+	color: var(--blue);
 	text-decoration: none;
 }
 
@@ -40,8 +34,67 @@ a:hover {
 	text-decoration: underline;
 }
 
+h1 {
+	margin-bottom: 1rem;
+}
+
+p {
+	color: #333;
+	margin-bottom: 1rem;
+}
+
 .container {
 	width: 90%;
 	max-width: 960px;
 	margin: 0 auto;
+}
+
+
+.content {
+	margin-top: 5rem;
+	padding-top: 3rem;
+	padding-bottom: 3rem;
+	text-align: right;
+	width: calc(4 / 12 * 100%);
+}
+
+@media screen and (max-width: 768px) {
+	.content {
+		margin-right: auto;
+		margin-left: auto;
+		text-align: center;
+		width: calc(8 / 12 * 100%);
+	}
+}
+
+.name {
+	color: #001233;
+}
+
+.social {
+	margin-top: 1.3rem;
+	margin-bottom: 2rem;
+}
+
+.github {
+	margin-right: 0.5rem;
+}
+
+.github,
+.file {
+	color: #333;
+}
+
+.hire-me {
+	color: #333;
+	display: inline-block;
+	padding: 0.4rem 0.6rem;
+	border: 1px solid #333;
+	border-radius: 4px;
+}
+
+.hire-me:hover {
+	background-color: #333;
+	color: #f9f9f9;
+	text-decoration: none;
 }
